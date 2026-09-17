@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: vyflix-backend
+    name: vyadmin
     runtime: node
     plan: starter
     region: frankfurt
