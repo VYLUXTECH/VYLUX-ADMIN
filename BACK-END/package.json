@@ -1,0 +1,14 @@
+{
+  "name": "vyflix-backend",
+  "private": true,
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
+    "ssh2": "^1.16.0",
+    "ws": "^8.18.0"
+  }
+}

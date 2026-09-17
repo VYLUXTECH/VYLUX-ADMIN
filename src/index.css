@@ -1,0 +1,75 @@
+:root {
+  /* Pure black + white. Layered by faint white fills over black, never grey. */
+  --bg: #000000;
+  --bg-gradient: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.04) 0%, transparent 55%);
+  --surface: rgba(255, 255, 255, 0.03);
+  --surface-solid: #0d0d0d;
+  --surface-hover: #161616;
+  --border: rgba(255, 255, 255, 0.14);
+  --border-hover: rgba(255, 255, 255, 0.32);
+
+  /* Accent — crisp white */
+  --accent: #ffffff;
+  --accent2: rgba(255, 255, 255, 0.75);
+  --accent-cyan: #ffffff;
+  --accent-pink: #d4d4d4;
+
+  /* Text — white primary, light only where it must recede */
+  --text: #ffffff;
+  --text-muted: #b3b3b3;
+  --text-dim: rgba(255, 255, 255, 0.5);
+
+  /* Status — green/red only, from the reference */
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #fbbf24;
+  --terminal-green: #d7d7d7;
+
+  --radius: 14px;
+  --radius-sm: 10px;
+  --radius-xs: 8px;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.7), 0 8px 30px rgba(0,0,0,0.6);
+  --shadow-glow: 0 0 20px rgba(255, 255, 255, 0.10);
+  --shadow-glow-cyan: 0 0 20px rgba(255, 255, 255, 0.08);
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  background-image: var(--bg-gradient);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.22); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.35); }
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideIn { from { opacity: 0; transform: translateX(60px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+@keyframes glow { 0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); } 50% { box-shadow: 0 0 18px rgba(255, 255, 255, 0.4); } }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }

@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+.env
+.DS_Store
+/.idx
+/sug.txt
+BACK-END/pterovps/

@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: vyflix-backend
+    runtime: node
+    plan: starter
+    region: frankfurt
+    rootDir: .
+    healthCheckPath: /
+    autoDeploy: true
+    buildCommand: npm install && npm --prefix BACK-END install && npm run build
+    startCommand: node BACK-END/server.js
+    envVars:
+      - key: VYLUX_DIR
+        value: /tmp/vylux
+      - key: PANEL_ORIGIN
+        value: https://vyadmin.onrender.com
+      - key: VYLUX_SUPABASE_URL
+        value: https://ykhfzckqbuykfazbzcui.supabase.co
+      - key: VYLUX_SUPABASE_ROLE_KEY
+        sync: false
+      - key: VYLUX_PASSWORD
+        sync: false
+      - key: VYLUX_GH_TOKEN
+        sync: false
+      - key: VYLUX_GH_OWNER
+        value: VYLUXTECH
